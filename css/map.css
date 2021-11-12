@@ -1,0 +1,12 @@
+#mapid {
+    grid-column: 2/4;
+    height: 500px;
+}
+
+.error {
+    padding: 20px;
+    background-color: #f44336; /* Red */
+    color: white;
+    margin-bottom: 15px;
+    display: none;
+}

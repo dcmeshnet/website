@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>DC Mesh Community Network</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/barebones.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
+
+  <link rel="stylesheet" href="css/map.css" />
+
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+
+
+</head>
+
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="grid-container full u-align-left">
+    <h5>DC Mesh Community Network</h5>
+  </div>
+  <div class="grid-container full">
+    <div>
+      <p>The DC Mesh Community Network is a community owned and operated network, providing affordable, fast, and fair
+        internet access to anyone in the District of Coumbia.
+        We are a group of DC residents working together to get our neighbors the internet access they need to
+        learn, work, and connect.</p>
+      <p>Fill out the form below if you are interested in getting connected to our network when its available!</p>
+      <p>We are in the early stages of this project, and we need volunteers! We can even if you think you
+        don't have the right skills!</p>
+      <p><a href="https://element.dcmesh.net/">Join Our Community Chat to Say Hi</a></p>
+    </div>
+  </div>
+  <div class="grid-container thirds">
+    <div class="u-align-left">
+      <h4>Get Connected!</h4>
+      <p>This form is purely for showing interest, it does not obligate you to sign up for anything.</p>
+      <span class="success-box" id="success-box">
+        <p style="margin-bottom: 0;">Submitted!</p>
+      </span>
+      <form id="contact-form">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" required>
+        <label for="email">Email Address</label>
+        <input type="email" name="email" id="email" required>
+        <label for="phone">Phone Number</label>
+        <input type="tel" name="phone" id="phone">
+        <label for="address">Address (Street, City, State on one line)</label>
+        <input type="text" name="address" id="address" required>
+        <label for="roof">I have access to my roof</label>
+        <select class="u-full-width" name="roof" id="roof">
+          <option value="roof-access">Yes</option>
+          <option value="no-roof-access">No</option>
+        </select>
+        <input class="button-primary" type="submit" value="Submit">
+      </form>
+      <div class="error" id="address-error">
+        <p>We couldn't determine the location of that address.</p>
+        <p>Please try again, putting your full address, including zip code, all on one line.</p>
+        </p>
+      </div>
+      <p>We will only use this information to (anonymously!) represent your potential node on the map and to contact you
+        to discuss and plan installation.</p>
+    </div>
+    <div id="mapid"></div>
+  </div>
+  <div class="grid-container full">
+    <h4>How does this work?</h4>
+    <p>We plan to build a network that can provide internet access to houses using radio waves. At the start, this will
+      probably take the form of individuals putting antennas on their roofs to share their own broadband with nearby
+      neighbors.</p>
+    <p>The plan, however, is to quickly locate a few tall buildings (usually called "supernodes") where we can connect
+      with existing fiber optic networks and place antennas on the roof. Other buildings with line-of-sight from their
+      roof to a supernode roof will then be able to gain internet access for themselves through a directional antenna.
+      They will also share that access with other houses nearby that may not have line-of-sight to a supernode through a
+      <a href="https://en.wikipedia.net/wiki/Mesh_networking">mesh network</a> that has the potential to extend
+      throughout an entire neighborhood.
+    </p>
+  </div>
+  <div class="grid-container full">
+    <h6><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License"
+          style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><br />This work is
+      licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons
+        Attribution-ShareAlike 4.0 International License</a>.</h6>
+  </div>
+  <!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+<script src="js/map.js"></script>
+
+</html>
